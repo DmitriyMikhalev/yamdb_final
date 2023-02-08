@@ -1,4 +1,4 @@
-https://github.com/DmitriyMikhalev/yamdb_final/actions/workflows/yamdb_workflow/badge.svg?event=push
+[![api_yamdb workflow](https://github.com/DmitriyMikhalev/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)](https://github.com/DmitriyMikhalev/yamdb_final/actions/workflows/yamdb_workflow.yaml)
 
 # api_yamdb
 Проект **YaMDb** собирает отзывы пользователей на различные произведения.
