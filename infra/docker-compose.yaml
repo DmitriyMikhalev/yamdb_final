@@ -3,17 +3,18 @@ version: "3.8"
 services:
   yamdb_database:
     image: postgres:13.0-alpine
+    restart: always
     volumes:
-      - db_value:/var/lib/postgresql/data/
+      - yamdb_final_db:/var/lib/postgresql/data/
     env_file:
       - ./.env
 
   web:
-    image: cokasqq/api_yamdb
+    image: cokasqq/api_yamdb:latest
     restart: always
     volumes:
-      - static_value:/app/static/
-      - media_value:/app/media/
+      - yamdb_final_static:/app/static/
+      - yamdb_final_media:/app/media/
     depends_on:
       - yamdb_database
     env_file:
@@ -21,6 +22,7 @@ services:
 
   nginx:
     image: nginx:1.21.3-alpine
+    restart: always
     ports:
       - "80:80"
     volumes:
@@ -31,6 +33,6 @@ services:
       - web
 
 volumes:
-  static_value:
-  media_value:
-  db_value:
+  yamdb_final_static:
+  yamdb_final_media:
+  yamdb_final_db:

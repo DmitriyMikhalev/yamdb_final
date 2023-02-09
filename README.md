@@ -1,5 +1,9 @@
 [![api_yamdb workflow](https://github.com/DmitriyMikhalev/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)](https://github.com/DmitriyMikhalev/yamdb_final/actions/workflows/yamdb_workflow.yaml)
 
+```
+http://51.250.27.161:80/
+```
+
 # api_yamdb
 Проект **YaMDb** собирает отзывы пользователей на различные произведения.
 
